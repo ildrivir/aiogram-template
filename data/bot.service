@@ -1,0 +1,15 @@
+[Unit]
+Description=TelegramBot
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/path/to/your/bot/directory
+ExecStart=/path/to/your/bot/venv/bin/python3 /path/to/your/bot/app.py
+
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
